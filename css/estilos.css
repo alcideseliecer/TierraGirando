@@ -1,0 +1,138 @@
+html,body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: -webkit-radial-gradient(#2A7079 10%,#173C41 25%,#0C1F22 80%);
+	color: #eee;
+	font-family: sans-serif;
+	text-align: center;
+}
+h1 {
+	margin: 0;
+	padding-top: .8em;
+}
+.nubes {
+	width: 220px;
+	height: 220px;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.nubes img {
+	position: relative;
+	z-index: 20;
+}
+
+.tierra {
+	width: 200px;
+	height: 200px;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+
+	border-radius: 50%;
+	box-shadow: -30px -30px 0 -10px rgba(0,0,0,.15) inset,
+				-60px -20px 0 0 rgba(0,0,0,.1) inset,
+				5px 5px 0 0 rgba(255,255,255,.2) inset;
+
+	background: url(../img/mapa.png);
+	background-size: cover;
+
+	-webkit-animation: tierra-girando 5s infinite linear;
+}
+
+@-webkit-keyframes tierra-girando {
+	from {
+		background-position: 0 center;
+	}
+
+	to {
+		background-position: -398px center;
+	}
+}
+
+.estrella {
+	width: 3px;
+	height: 3px;
+	background: rgba(255,255,255,.4);
+	border-radius: 50%;
+	position: absolute;
+}
+
+.estrella.impar {
+	-webkit-animation: estrella-impar 2s infinite;
+}
+
+.estrella.par {
+	-webkit-animation: estrella-par 2s infinite;
+}
+
+.primera {
+	left: 20%;
+	top: 20%;
+}
+.segunda {
+	left: 40%;
+	top: 30%;
+}
+.tercera {
+	left: 70%;
+	top: 40%;
+}
+.cuarta {
+	left: 90%;
+	top: 10%;
+}
+.quinta {
+	left: 10%;
+	top: 60%;
+}
+.sexta {
+	left: 80%;
+	top: 70%;
+}
+.septima {
+	left: 50%;
+	top: 80%;
+}
+.octava {
+	left: 20%;
+	top: 80%;
+}
+
+@-webkit-keyframes estrella-impar {
+	0%, 80% {
+		box-shadow: none;
+	}
+
+	100% {
+		box-shadow: 0 0 10px 10px rgba(255,255,255,.3);
+	}
+}
+
+@-webkit-keyframes estrella-par {
+	0%, 40%, 80%{
+		box-shadow: none;
+	}
+
+	60% {
+		box-shadow: 0 0 10px 10px rgba(255,255,255,.3);
+	}
+}
+
+
+footer {
+	font-style: italic;
+	opacity: .3;
+}
